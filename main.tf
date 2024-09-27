@@ -24,7 +24,7 @@ provider "aws" {
 }
 # Fetch GitHub token from AWS Secrets Manager
 data "aws_secretsmanager_secret_version" "git_token" {
-  secret_id = "arn:aws:secretsmanager:us-east-1:801935342396:secret:git_token-LuSN2r"
+  secret_id = "arn:aws:secretsmanager:us-east-1:11111111111:secret:git_token-xxxxx" # use correct secret_arn
 }
 
 locals {
