@@ -75,10 +75,10 @@ eks = {
   node_group_min_size               = 1
 }
 # GitHub repository URL 
-git_repo_url = "https://github.com/Ecolibrium-Energy/Helm.git"
+git_repo_url = "https://github.com/Helm.git" # use your helm repo 
 
 ebs_csi = {
-  account_id	= "801935342396"
+  account_id	= "11111111111" # change your account id
   role_name	= "AWS_EBS_CSI_DriverRole"
   kms_policy_name	= "KMS_Key_For_EBS_CSI_Driver"
   
@@ -99,6 +99,6 @@ alb = {
   alb_sa_name       = "aws-load-balancer-controller"
   alb_sa_namespace  = "kube-system"
   cluster_name      = "eks-demo"
-  account_id      = "801935342396"
+  account_id      = "1111111111111" # change your account id
 }
 
