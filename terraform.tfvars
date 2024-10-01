@@ -102,3 +102,10 @@ alb = {
   account_id      = "1111111111111" # change your account id
 }
 
+
+# ArgoCD-specific Variables
+argocd = {
+  namespace           = "argocd"
+  argocd_host        = "argocd-demo.example"
+  acm_certificate_arn = "arn:aws:acm:us-east-1:111111111112:certificate/199d3d87-0755-48b9-8665-c88c95738440"
+}

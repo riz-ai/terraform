@@ -107,3 +107,14 @@ module "alb_ingress_controller" {
 
 }
 
+module "argocd" {
+  source                 = "./modules/argocd"
+  namespace              = "argocd"
+  alb_subnets            = module.vpc.public_subnet_ids
+  acm_certificate_arn    = var.argocd.acm_certificate_arn
+  argocd_host           = var.argocd.argocd_host
+
+  git_repo_clone_directory = module.git_repo.repository_clone_directory
+
+  depends_on = [module.git_repo]
+}
